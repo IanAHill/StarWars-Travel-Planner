@@ -44,6 +44,6 @@ body {
 }
 
 .search-bar-border {
-    border-style:groove;
+    border-style:dotted;
     padding: auto;
 }
