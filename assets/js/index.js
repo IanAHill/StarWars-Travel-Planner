@@ -1,36 +1,16 @@
-var startButton = $("#start-button");
-var planetDisplay = $("#planet-display");
-var weatherDisplay = $("#weather-display");
+var searchButton = $("#search-button"); // NEEDS TO BE LINKED WITH HTML ***********
+var planetInput = $("#planet-input"); // NEEDS TO BE LINKED WITH HTML ***********
 
 var swapi1 = "https://swapi.dev/api/planets/?page=1";
 var swapi2 = "https://swapi.dev/api/planets/?page=2";
 var swapi3 = "https://swapi.dev/api/planets/?page=3";
 
-var myWeatherAPIKey = "34010a9f11bb2f02977743a236eef58a";
-
 var planetsArray = [];
 
-function appendPlanets() {
-  var newList = $("<ul>");
-
-  for (var i = 0; i < planetsArray.length; i++) {
-    var newLi = $("<li>");
-    newLi.text(
-      i +
-        " Planet Name: " +
-        planetsArray[i].name +
-        ", Planet Climate: " +
-        planetsArray[i].climate.split(",")[0]
-    );
-    newList.append(newLi);
-  }
-  planetDisplay.append(newList);
-}
-
 //remove index 27 from planet array as its unknown from swapi
-function cutOutUnknown() {
-  planetsArray.splice(27, 1);
-}
+// function cutOutUnknown() {
+//   planetsArray.splice(27, 1);
+// }
 
 function getPlanetInfo() {
   fetch(swapi1).then(function (response) {
@@ -51,8 +31,12 @@ function getPlanetInfo() {
                 planetsArray.push(data3.results[i]);
                 console.log(planetsArray);
               }
-              cutOutUnknown();
-              appendPlanets();
+              // cutOutUnknown();
+              localStorage.setItem(
+                "planetsArray",
+                JSON.stringify(planetsArray)
+              );
+              searchPlanet();
             });
           });
         });
@@ -61,32 +45,11 @@ function getPlanetInfo() {
   });
 }
 
-function getWeather() {
-  var saharaDesertLAT = 25.28;
-  var saharaDesertLON = 14.43;
-  var saharaDesertURL =
-    "https://api.openweathermap.org/data/2.5/weather?lat=" +
-    saharaDesertLAT +
-    "&lon=" +
-    saharaDesertLON +
-    "&units=imperial" +
-    "&appid=" +
-    myWeatherAPIKey;
-
-  fetch(saharaDesertURL).then(function (response) {
-    response.json().then(function (data) {
-      var newP = $("<p>");
-      newP.text(
-        "Current temperature on Tatooine: " + data.main.temp + " fahrenheit"
-      );
-      weatherDisplay.append(newP);
-    });
-  });
+function searchPlanet() {
+  var test = "Rodia";
+  console.log(planetsArray.indexOf(test));
 }
 
-function main() {
-  getPlanetInfo();
-  getWeather();
-}
+getPlanetInfo();
 
-startButton.on("click", main);
+searchButton.on("click", searchPlanet);
