@@ -1,6 +1,7 @@
-var startButton = $("#start-button");
-var planetDisplay = $("#planet-display");
-var weatherDisplay = $("#weather-display");
+var searchByPlanetButton = $("#search-by-planet-button"); // NEEDS TO BE LINKED WITH HTML ***********
+var searchByClimateButton = $("#search-by-climate-button"); // NEEDS TO BE LINKED WITH HTML ***********
+var planetInput = $("#planet-input"); // NEEDS TO BE LINKED WITH HTML ***********
+var climateInput = $("#climate-input"); // NEEDS TO BE LINKED WITH HTML ***********
 
 var swapi1 = "https://swapi.dev/api/planets/?page=1";
 var swapi2 = "https://swapi.dev/api/planets/?page=2";
@@ -9,6 +10,7 @@ var swapi3 = "https://swapi.dev/api/planets/?page=3";
 var myWeatherAPIKey = "34010a9f11bb2f02977743a236eef58a";
 
 var planetsArray = [];
+var searchedClimatesArray = [];
 
 function appendPlanets() {
   var newList = $("<ul>");
@@ -51,8 +53,11 @@ function getPlanetInfo() {
                 planetsArray.push(data3.results[i]);
                 console.log(planetsArray);
               }
-              cutOutUnknown();
-              appendPlanets();
+              // cutOutUnknown();
+              localStorage.setItem(
+                "planetsArray",
+                JSON.stringify(planetsArray)
+              );
             });
           });
         });
@@ -61,27 +66,47 @@ function getPlanetInfo() {
   });
 }
 
-function getWeather() {
-  var saharaDesertLAT = 25.28;
-  var saharaDesertLON = 14.43;
-  var saharaDesertURL =
-    "https://api.openweathermap.org/data/2.5/weather?lat=" +
-    saharaDesertLAT +
-    "&lon=" +
-    saharaDesertLON +
-    "&units=imperial" +
-    "&appid=" +
-    myWeatherAPIKey;
-
-  fetch(saharaDesertURL).then(function (response) {
-    response.json().then(function (data) {
-      var newP = $("<p>");
-      newP.text(
-        "Current temperature on Tatooine: " + data.main.temp + " fahrenheit"
+function searchPlanet() {
+  var test = "Corellia";
+  for (var i = 0; i < planetsArray.length; i++) {
+    //planetInput.val().ToLower
+    if (planetsArray[i].name.toLowerCase() === test.toLowerCase()) {
+      console.log(
+        "planet searched is " +
+          planetsArray[i].name.toLowerCase() +
+          " and index is: " +
+          i
       );
-      weatherDisplay.append(newP);
-    });
-  });
+      localStorage.setItem("indexOfSearch", i);
+    }
+  }
+  goToSinglePage();
+}
+
+function searchClimate() {
+  var test = "ARid";
+  for (var i = 0; i < planetsArray.length; i++) {
+    //climateInput.val().ToLower
+    if (
+      planetsArray[i].climate.split(",")[0].toLowerCase() === test.toLowerCase()
+    ) {
+      searchedClimatesArray.push(planetsArray[i]);
+    }
+  }
+  console.log(searchedClimatesArray);
+  localStorage.setItem(
+    "searchedClimates",
+    JSON.stringify(searchedClimatesArray)
+  );
+  goToResultsPage();
+}
+
+function goToSinglePage() {
+  window.location.href = "./singlePlanetPage.html";
+}
+
+function goToResultsPage() {
+  window.location.href = "./searchResults.html";
 }
 
 function main() {
@@ -89,4 +114,11 @@ function main() {
   getWeather();
 }
 
-startButton.on("click", main);
+var testButton1 = $("#test1");
+testButton1.on("click", searchPlanet);
+
+var testButton2 = $("#test2");
+testButton2.on("click", searchClimate);
+
+searchByPlanetButton.on("click", searchPlanet);
+searchByClimateButton.on("click", searchClimate);
