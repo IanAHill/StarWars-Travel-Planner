@@ -1,5 +1,8 @@
 var myWeatherAPIKey = "34010a9f11bb2f02977743a236eef58a";
 
+
+
+
 // function getWeather() {
 //   var saharaDesertLAT = 25.28;
 //   var saharaDesertLON = 14.43;
