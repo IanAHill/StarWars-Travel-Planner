@@ -1,11 +1,14 @@
-var searchButton = $("#search-button"); // NEEDS TO BE LINKED WITH HTML ***********
+var searchByPlanetButton = $("#search-by-planet-button"); // NEEDS TO BE LINKED WITH HTML ***********
+var searchByClimateButton = $("#search-by-climate-button"); // NEEDS TO BE LINKED WITH HTML ***********
 var planetInput = $("#planet-input"); // NEEDS TO BE LINKED WITH HTML ***********
+var climateInput = $("#climate-input"); // NEEDS TO BE LINKED WITH HTML ***********
 
 var swapi1 = "https://swapi.dev/api/planets/?page=1";
 var swapi2 = "https://swapi.dev/api/planets/?page=2";
 var swapi3 = "https://swapi.dev/api/planets/?page=3";
 
 var planetsArray = [];
+var searchedClimatesArray = [];
 
 //remove index 27 from planet array as its unknown from swapi
 // function cutOutUnknown() {
@@ -36,7 +39,6 @@ function getPlanetInfo() {
                 "planetsArray",
                 JSON.stringify(planetsArray)
               );
-              searchPlanet();
             });
           });
         });
@@ -46,10 +48,55 @@ function getPlanetInfo() {
 }
 
 function searchPlanet() {
-  var test = "Rodia";
-  console.log(planetsArray.indexOf(test));
+  var test = "Corellia";
+  for (var i = 0; i < planetsArray.length; i++) {
+    //planetInput.val().ToLower
+    if (planetsArray[i].name.toLowerCase() === test.toLowerCase()) {
+      console.log(
+        "planet searched is " +
+          planetsArray[i].name.toLowerCase() +
+          " and index is: " +
+          i
+      );
+      localStorage.setItem("indexOfSearch", i);
+    }
+  }
+  goToSinglePage();
+}
+
+function searchClimate() {
+  var test = "ARid";
+  for (var i = 0; i < planetsArray.length; i++) {
+    //climateInput.val().ToLower
+    if (
+      planetsArray[i].climate.split(",")[0].toLowerCase() === test.toLowerCase()
+    ) {
+      searchedClimatesArray.push(planetsArray[i]);
+    }
+  }
+  console.log(searchedClimatesArray);
+  localStorage.setItem(
+    "searchedClimates",
+    JSON.stringify(searchedClimatesArray)
+  );
+  goToResultsPage();
+}
+
+function goToSinglePage() {
+  window.location.href = "./singlePlanetPage.html";
+}
+
+function goToResultsPage() {
+  window.location.href = "./searchResults.html";
 }
 
 getPlanetInfo();
 
-searchButton.on("click", searchPlanet);
+var testButton1 = $("#test1");
+testButton1.on("click", searchPlanet);
+
+var testButton2 = $("#test2");
+testButton2.on("click", searchClimate);
+
+searchByPlanetButton.on("click", searchPlanet);
+searchByClimateButton.on("click", searchClimate);
