@@ -5,14 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SINGLE PLANET PAGE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      href="https://allfont.net/allfont.css?fonts=star-jedi"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body>
-    <h1>SINGLE PLANET PAGE</h1>
-    <div id = "planet-element">
-        
-    </div>
-    <script src = "assets/js/singlePlanetPage.js"></script>
+  <body class="has-background-black">
+    <h1 id="planet-name" class="is-size-1 has-text-centered">MUSTAFAR</h1>
 
-    <img src="./assets/images/endor.jpeg" alt="" />
+    <div class="card has-background-black">
+      <div class="card-image">
+        <figure class="image is-1280x960">
+          <img
+            id="planet-img"
+            src="./assets/images/mustafar.jpeg"
+            alt="Picture of Planet"
+          />
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p id="planet-desc" class="title is-4 has-text-centered">
+              A small planet located in the outer rim that is famous for its
+              volcanic lava sea and molten rock plains. Mustafar's lava flows
+              are mined for unique and valuable minerals that are used in the
+              assembly of battle droids. Come visit the location where Jedi
+              Master Obi-Wan Kenobi defeated the newly appointed Sith Lord Darth
+              Vader.
+            </p>
+          </div>
+        </div>
+
+        <div class="content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+          iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
+          <a href="#">#responsive</a>
+          <br />
+          <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/singlePlanetPage.js"></script>
   </body>
 </html>
