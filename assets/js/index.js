@@ -20,20 +20,18 @@ function getPlanetInfo() {
     response.json().then(function (data) {
       for (var i = 0; i < data.results.length; i++) {
         planetsArray.push(data.results[i]);
-        console.log(planetsArray);
       }
       fetch(swapi2).then(function (response2) {
         response2.json().then(function (data2) {
           for (var i = 0; i < data2.results.length; i++) {
             planetsArray.push(data2.results[i]);
-            console.log(planetsArray);
           }
           fetch(swapi3).then(function (response3) {
             response3.json().then(function (data3) {
               for (var i = 0; i < data3.results.length; i++) {
                 planetsArray.push(data3.results[i]);
-                console.log(planetsArray);
               }
+              console.log(planetsArray);
               // cutOutUnknown();
               localStorage.setItem(
                 "planetsArray",
@@ -48,10 +46,15 @@ function getPlanetInfo() {
 }
 
 function searchPlanet() {
-  var test = "Corellia";
+  //*********************FOR TESTING*********************
+  planetInput = $("#test1input");
+  //*********************FOR TESTING*********************
+
+  console.log(planetInput.val());
   for (var i = 0; i < planetsArray.length; i++) {
-    //planetInput.val().ToLower
-    if (planetsArray[i].name.toLowerCase() === test.toLowerCase()) {
+    if (
+      planetsArray[i].name.toLowerCase() === planetInput.val().toLowerCase()
+    ) {
       console.log(
         "planet searched is " +
           planetsArray[i].name.toLowerCase() +
@@ -61,15 +64,19 @@ function searchPlanet() {
       localStorage.setItem("indexOfSearch", i);
     }
   }
-  goToSinglePage();
+  // goToSinglePage();
 }
 
 function searchClimate() {
-  var test = "tEmPeRaTe";
+  //*********************FOR TESTING*********************
+  climateInput = $("#test2input");
+  //*********************FOR TESTING*********************
+
+  searchedClimatesArray = [];
   for (var i = 0; i < planetsArray.length; i++) {
-    //climateInput.val().ToLower
     if (
-      planetsArray[i].climate.split(",")[0].toLowerCase() === test.toLowerCase()
+      planetsArray[i].climate.split(",")[0].toLowerCase() ===
+      climateInput.val().toLowerCase()
     ) {
       searchedClimatesArray.push(planetsArray[i]);
     }
@@ -92,11 +99,12 @@ function goToResultsPage() {
 
 getPlanetInfo();
 
+//*********************FOR TESTING*********************
 var testButton1 = $("#test1");
 testButton1.on("click", searchPlanet);
-
 var testButton2 = $("#test2");
 testButton2.on("click", searchClimate);
+//*********************FOR TESTING*********************
 
 searchByPlanetButton.on("click", searchPlanet);
 searchByClimateButton.on("click", searchClimate);
