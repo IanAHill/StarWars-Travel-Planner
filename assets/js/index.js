@@ -7,52 +7,34 @@ var swapi1 = "https://swapi.dev/api/planets/?page=1";
 var swapi2 = "https://swapi.dev/api/planets/?page=2";
 var swapi3 = "https://swapi.dev/api/planets/?page=3";
 
-var myWeatherAPIKey = "34010a9f11bb2f02977743a236eef58a";
-
 var planetsArray = [];
 var searchedClimatesArray = [];
 
-function appendPlanets() {
-  var newList = $("<ul>");
-
-  for (var i = 0; i < planetsArray.length; i++) {
-    var newLi = $("<li>");
-    newLi.text(
-      i +
-        " Planet Name: " +
-        planetsArray[i].name +
-        ", Planet Climate: " +
-        planetsArray[i].climate.split(",")[0]
-    );
-    newList.append(newLi);
-  }
-  planetDisplay.append(newList);
-}
-
 //remove index 27 from planet array as its unknown from swapi
-function cutOutUnknown() {
-  planetsArray.splice(27, 1);
-}
+// function cutOutUnknown() {
+//   planetsArray.splice(27, 1);
+// }
 
 function getPlanetInfo() {
   fetch(swapi1).then(function (response) {
     response.json().then(function (data) {
       for (var i = 0; i < data.results.length; i++) {
         planetsArray.push(data.results[i]);
-        console.log(planetsArray);
+        // console.log(planetsArray);
       }
       fetch(swapi2).then(function (response2) {
         response2.json().then(function (data2) {
           for (var i = 0; i < data2.results.length; i++) {
             planetsArray.push(data2.results[i]);
-            console.log(planetsArray);
+            // console.log(planetsArray);
           }
           fetch(swapi3).then(function (response3) {
             response3.json().then(function (data3) {
               for (var i = 0; i < data3.results.length; i++) {
                 planetsArray.push(data3.results[i]);
-                console.log(planetsArray);
+                
               }
+              console.log(planetsArray);
               // cutOutUnknown();
               localStorage.setItem(
                 "planetsArray",
@@ -109,10 +91,7 @@ function goToResultsPage() {
   window.location.href = "./searchResults.html";
 }
 
-function main() {
-  getPlanetInfo();
-  getWeather();
-}
+getPlanetInfo();
 
 var testButton1 = $("#test1");
 testButton1.on("click", searchPlanet);
