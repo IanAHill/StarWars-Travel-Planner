@@ -65,7 +65,7 @@ function searchPlanet() {
 }
 
 function searchClimate() {
-  var test = "ARid";
+  var test = "tEmPeRaTe";
   for (var i = 0; i < planetsArray.length; i++) {
     //climateInput.val().ToLower
     if (
