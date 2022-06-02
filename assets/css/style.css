@@ -50,3 +50,50 @@ body{
       margin: 0;
       padding: 14px;
     } */
+body {
+    background-color: grey;
+}
+
+/* makes the nav bar black*/
+.navbar {
+    background-color: black;
+}
+/* Home button yellow */
+.navbar-item {
+    color: #ffe81f;
+}
+/* menu link yellow */
+.navbar-link {
+    color: #ffe81f;
+}
+/* items in menu */
+.navbar-dropdown .navbar-item {
+    color: black;
+}
+/* picture header */
+.pictureContainer {
+    text-align: center;
+}
+
+.searchBarContainer {
+   position:relative;
+   padding: 14px 0;
+   border-radius: 50px;
+   
+}
+
+.submit-btn{
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 16px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    display: inline-block;
+}
+
+.search-bar-border {
+    border-style:double;
+    padding: auto;
+}
