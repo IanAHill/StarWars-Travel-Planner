@@ -20,8 +20,9 @@
             width="60"
             height="60"
           />
+          <!-- ^ Nav bar logo ^ -->
         </a>
-
+        <!-- Nav bar buttons -->
         <a
           role="button"
           class="navbar-burger"
@@ -34,7 +35,7 @@
           <span aria-hidden="true"></span>
         </a>
       </div>
-
+<!-- Nav bar buttons + drop down menu -->
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
           <a class="navbar-item"> Home </a>
@@ -53,34 +54,52 @@
             </div>
           </div>
         </div>
-
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a class="button is-light"> Log in </a>
-            </div>
+      </div>
+    </nav>
+<!-- Picture at the top of browser -->
+    <div class="pictureContainer">
+      <img
+        src="./assets/images/starWarsHeader.JPEG"
+        alt="header"
+        width="1435"
+        height="200"
+      />
+    </div>
+<!-- row one containing planets search bar -->
+    <div class="row">
+      <div class="row">First Row</div>
+      <div class="searchBarContainer">
+        <div class="search-bar-border">
+          <form action="">
+            <input type="text" placeholder="Search by Planets" name="q">
+            <a class="search-btn" href="#"></a>
+            <button class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
+        </form>
+        </div>
+<!-- row two containing climates search bar -->
+    <div class="row">
+      <div class="row">Second Row</div>
+      <div class="search-climate">
+        <div class="search-bar-border">
+          <form action="">
+            <input type="text" placeholder="Search by Climate" name="q">
+            <a class="search-btn" href="#"></a>
+            <button class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
+          </form>
+        </div>
+      </div>
+<!-- row three containing destination cards -->
+    <div class="row">
+      <div class="row">Third Row</div>
+      <div class="Destinations">
+        <!-- add cards for destinations here -->
+        <div class="cards">
+          <div class="card">
+            <img src="" alt="" class=""
           </div>
         </div>
       </div>
-    </nav>
-    <div class="columns">
-      <div class="column">First column</div>
-      <div class="column">
-        <div class="container">
-          <!-------------------------FOR TESTING ---------------------------->
-          <button id="test1">SEARCH BY PLANETS</button>
-          <input type="text" name="test1" id="test1input" />
-          <button id="test2">SEARCH BY CLIMATES</button>
-          <input type="text" name="test2" id="test2input" />
-          <!-------------------------FOR TESTING ---------------------------->
-        </div>
-      </div>
-      <div class="column">Third column</div>
     </div>
-
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
