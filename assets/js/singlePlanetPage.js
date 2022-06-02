@@ -76,3 +76,4 @@ function displayPlanetData(planet){
 
 displayPlanetData(searchNumber);
 // This will run when you run an event
+
