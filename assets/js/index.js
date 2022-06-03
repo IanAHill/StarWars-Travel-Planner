@@ -1,8 +1,5 @@
 var searchByPlanetButton = $("#search-by-planet-button");
 var searchByClimateButton = $("#search-by-climate-button");
-var planetInput = $("#planet-input"); // NEEDS TO BE LINKED WITH HTML ***********
-var climateInput = $("#climate-input"); // NEEDS TO BE LINKED WITH HTML ***********
-
 var planetList = $("#planetsList");
 var climateList = $("#climatesList");
 
@@ -24,11 +21,6 @@ var possibleClimates = [
   "polluted",
   "unknown",
 ];
-
-//remove index 27 from planet array as its unknown from swapi
-// function cutOutUnknown() {
-//   planetsArray.splice(27, 1);
-// }
 
 function getPlanetInfo() {
   fetch(swapi1).then(function (response) {
@@ -63,8 +55,6 @@ function getPlanetInfo() {
                 );
                 climateList.append(newDropDown);
               }
-
-              // cutOutUnknown();
               localStorage.setItem(
                 "planetsArray",
                 JSON.stringify(planetsArray)

@@ -61,10 +61,6 @@ function appendPlanets() {
   searchResultAppend.empty();
 
   for (var i = 0; i < climateArray.length; i++) {
-    var newBtn = $("<button>");
-    newBtn.attr("cardbuttonclickname", climateArray[i].name);
-    newBtn.addClass("cardButton");
-
     var newCard = $("<div>");
     newCard.addClass("card");
 
@@ -162,6 +158,8 @@ function appendPlanets() {
         newImg.attr("src", "assets/images/socorro.jpg");
         break;
     }
+    var newBtn = $("<a>");
+    newBtn.attr("cardbuttonclickname", climateArray[i].name);
 
     var newH3 = $("<h3>");
     newH3.text(climateArray[i].name);
