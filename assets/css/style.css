@@ -38,8 +38,11 @@ body{
     padding: 16px;
     width: 30%;
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: black;
+    color:#ffe81f;
   }
+
+
 
   /* @media screen and (max-width: 600px) {
     .topnav a, .topnav input[type=text] {
