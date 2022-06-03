@@ -54,15 +54,20 @@ body{
 
 .singleCard{
     margin: auto;
-    padding: 16px;
+    padding: 0px;
     width: 50%;
     text-align: center;
-    background-color: black;
+    background-color: #1a1a1a;
     color:#ffe81f;
 }
 
 .singlePageFont{
     font-size: 25px;
+}
+
+.singlePageFontBigger{
+    font-size: 30px;
+    text-decoration: underline;
 }
 
 .weatherBorder{
@@ -72,17 +77,16 @@ body{
 }
 
 #planet-desc{
-    background-color: black;
     margin-left: 12vw;
     margin-right: 12vw;
 }
 
 .black{
-    background-color: black;
+    background-color: #1a1a1a;
 }
 
 .card-content{
-    background-color: black;
+    background-color: #1a1a1a;
 }
 
 body {
@@ -155,7 +159,6 @@ h1 {
     font-size: 2rem;
     text-align: center;
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 50%;
     color: #ffe81f;
     background-color: unset;
@@ -168,4 +171,9 @@ h1 {
 
 h3{
     background-color: unset;
+}
+
+.goBackButton{
+    background-color: #1a1a1a;
+    color: #ffe81f;
 }

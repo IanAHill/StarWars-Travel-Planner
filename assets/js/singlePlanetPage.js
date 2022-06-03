@@ -17,11 +17,18 @@ function getWeather(lat, lon) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data.current.temp);
-      console.log(data.current.weather[0].main);
-      currentConditions.textContent = data.current.weather[0].main;
-      currentTemp.textContent =
-        "Current Temperature: " + data.current.temp + "°F";
+      console.log(data.current);
+
+      var icon = $(
+        "<img src='http://openweathermap.org/img/wn/" +
+          data.current.weather[0].icon +
+          "@2x.png'>"
+      );
+      currentTemp.textContent = "Temperature: " + data.current.temp + "°F";
+      currentConditions = $("#current-conditions");
+      currentConditions.append(icon);
+      $("#humid").text("Humidity: " + data.current.humidity + "%");
+      $("#uvi").text("UV Index: " + data.current.uvi);
     });
 }
 
@@ -65,7 +72,7 @@ function displayPlanetData(planet) {
       break;
 
     case "unknown":
-      currentConditions = "unknown";
+      currentConditions.textContent = "Unknown";
       break;
   }
 
@@ -232,6 +239,11 @@ function displayPlanetData(planet) {
   // imgEl.setAttribute("src", "tatooine.png")
 }
 
+// This will run when you open the page
 displayPlanetData(searchNumber);
 
-// This will run when you run an event
+function goToStartPage() {
+  window.location.href = "./index.html";
+}
+
+$("#goBack").on("click", goToStartPage);
