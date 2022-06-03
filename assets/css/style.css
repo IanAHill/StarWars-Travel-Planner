@@ -166,7 +166,8 @@ h1 {
 
 .submit-btn {
     background-color: black;
-    color: white;
+    color: #ffe81f;
+    font-family: 'Goldman', cursive;
 }
 
 h3{
@@ -182,4 +183,8 @@ h3{
     padding: 0;
     border: none;
     background: none;
+}
+
+select{
+    font-family: 'Goldman', cursive;
 }
