@@ -67,7 +67,7 @@ body{
       padding: 14px;
     } */
 body {
-    background-color: grey;
+    background-color: whitesmoke;
 }
 
 /* makes the nav bar black*/
@@ -94,8 +94,7 @@ body {
 .searchBarContainer {
    position:relative;
    padding: 14px 0;
-   border-radius: 50px;
-   
+   background-color: blue;
 }
 
 .submit-btn{
@@ -111,5 +110,39 @@ body {
 
 .search-bar-border {
     border-style:double;
+    margin: 2rem;
+    background-color: orange;
     padding: auto;
+}
+
+.planetBar {
+    background-color: purple;
+}
+
+.climateBar {
+    background-color: green;
+}
+
+/* cards design */
+.homePageCard {
+    margin-top: 8%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 6px 10px black;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 50%;
+    color: #ffe81f;
+}
+
+.submit-btn {
+    background-color: black;
+    color: white;
 }
