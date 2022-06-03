@@ -67,52 +67,84 @@
 <!-- NEEDS FIXING -->
 <!-- row one containing planets search bar -->
     <div class="row">
-      <div class="row">First Row - planet search bar</div>
+      <div class="row1">First Row - planet search bar</div>
       <div class="searchBarContainer">
-        <div class="search-bar-border">
+        <div class="search-bar-border" type="card">
           <form action="">
-            <input type="text" placeholder="Search by Planets" name="q">
+            <input class="planetBar" type="text" placeholder="Search by Planets" name="q">
             <a class="search-btn" href="#"></a>
             <button class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
         </form>
         </div>
+      </div>
 <!-- row two containing climates search bar -->
     <div class="row">
       <div class="row">Second Row - climate search bar</div>
-      <div class="search-climate">
+      <div class="searchBarContainer">
         <div class="search-bar-border">
           <form action="">
-            <input type="text" placeholder="Search by Climate" name="q">
+            <input class="climateBar" type="text" placeholder="Search by Climate" name="q">
             <a class="search-btn" href="#"></a>
             <button class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
           </form>
         </div>
       </div>
-<!-- row three containing destination cards -->
+
     <div class="row1">
       <div class="rowPop">
         <h1>Popular Destinations</h1>
-      <div class="Destinations"></div>
+      <div class="destinations">
         <!-- add cards for destinations here -->
-        <div class="column1">
-          <div class="card">One</div>
-        </div>
+        <!-- Planet Tatooine Card -->
         <div class="column">
-          <div class="card">Two</div>
+            <link rel="stylesheet" href="./singlePlanetPage.html">
+            <div class="card">Tatooine
+              <button class="planetTatooine"><img src="./assets/homepagePlanets/tatooine.JPG"></button>
+              </div>
+          </div>
         </div>
+        <!-- Planet Alderaan Card -->
         <div class="column">
-          <div class="card">Three</div>
+          <link rel="stylesheet" href="./singlePlanetPage.html">
+          <div class="card">Alderaan
+            <button class="planetAlderaan"><img src="./assets/homepagePlanets/alderaan.JPG"></button>
+          </div>
+        <!-- Planet Hoth Card -->
+        <div class="column">
+          <link rel="stylesheet" href="./singlePlanetPage.html">
+          <div class="card">Hoth
+            <button class="planetAlderaan"><img src="./assets/homepagePlanets/hoth.jpg"></button>
+          </div>
         </div>
-    <div class="row">
-      <div class="row">
+
+        <!-- Planet Endoor Card-->
         <div class="column">
-          <div class="card">Four</div>
+          <link rel="stylesheet" href="./singlePlanetPage.html">
+          <div class="card">Endoor
+            <button class="planetAlderaan"><img src="./assets/homepagePlanets/endoor.jpg"></button>
+          </div>
         </div>
+        <!-- Planet Naboo Card -->
         <div class="column">
-          <div class="card">Five</div>
+          <link rel="stylesheet" href="./singlePlanetPage.html">
+          <div class="card">Naboo
+            <button class="planetAlderaan"><img src="./assets/homepagePlanets/naboo.jpg"></button>
+          </div>
         </div>
+        <!-- Planet Coruscant Card -->
         <div class="column">
-          <div class="card">Six</div>
+          <link rel="stylesheet" href="./singlePlanetPage.html">
+          <div class="card">Coruscant
+            <button class="planetAlderaan"><img src="./assets/homepagePlanets/corcuscant.jpg"></button>
+          </div>
+          
+        </div>
+        <!-- Planet Mustafar Card -->
+        <div class="column">
+          <link rel="stylesheet" href="./singlePlanetPage.html">
+          <div class="card">Mustafar
+            <button class="planetAlderaan"><img src="./assets/homepagePlanets/mustafar.jpg"></button>
+          </div>
         </div>
       </div>
     </div>
