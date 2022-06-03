@@ -64,7 +64,7 @@ function appendPlanets() {
     var newCard = $("<div>");
     newCard.addClass("card");
 
-    var newImg = $("<img width='200' height='100'>");
+    var newImg = $("<img width='400' height='200'>");
 
     switch (climateArray[i].name) {
       case "Tatooine":
@@ -160,6 +160,7 @@ function appendPlanets() {
     }
     var newBtn = $("<a>");
     newBtn.attr("cardbuttonclickname", climateArray[i].name);
+    newBtn.addClass("aTag");
 
     var newH3 = $("<h3>");
     newH3.text(climateArray[i].name);
@@ -169,12 +170,13 @@ function appendPlanets() {
 
     newBtn.append(newCard);
     searchResultAppend.append(newBtn);
+    newBtn.on("click", cardClick);
   }
 }
 
 function cardClick(event) {
-  var planetClicked = event.target.getAttribute("cardbuttonclickname");
-  console.log(planetClicked);
+  var planetClicked = event.currentTarget.getAttribute("cardbuttonclickname");
+  console.log(event.currentTarget);
 
   for (var i = 0; i < planetsArray.length; i++) {
     if (planetsArray[i].name.toLowerCase() === planetClicked.toLowerCase()) {
@@ -205,6 +207,6 @@ for (var i = 0; i < possibleClimates.length; i++) {
 searchByClimateButton.on("click", searchClimate);
 searchByPlanetButton.on("click", searchPlanet);
 
-searchResultAppend.on("click", cardClick);
+// searchResultAppend.on("click", cardClick);
 
 appendPlanets();
