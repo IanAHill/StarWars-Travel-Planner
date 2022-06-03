@@ -267,7 +267,7 @@ function getWeather(lat, lon) {
 
 function displayPlanetData(planet) {
   var planetsArray = JSON.parse(localStorage.getItem("planetsArray"));
-  switch (planetsArray[planet].climate) {
+  switch (planetsArray[planet].climate.split(",")[0]) {
     case "arid":
       getWeather(25.28, 14.43);
       break;
