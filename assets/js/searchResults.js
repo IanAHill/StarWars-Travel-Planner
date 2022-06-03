@@ -207,6 +207,4 @@ for (var i = 0; i < possibleClimates.length; i++) {
 searchByClimateButton.on("click", searchClimate);
 searchByPlanetButton.on("click", searchPlanet);
 
-// searchResultAppend.on("click", cardClick);
-
 appendPlanets();

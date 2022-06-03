@@ -9,13 +9,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav
+      class="navbar is-fixed-top"
+      role="navigation"
+      aria-label="main navigation"
+    >
       <div class="navbar-brand">
         <a class="navbar-item" href="https://bulma.io">
           <img
@@ -38,10 +45,10 @@
           <span aria-hidden="true"></span>
         </a>
       </div>
-<!-- Nav bar buttons + drop down menu -->
+      <!-- Nav bar buttons + drop down menu -->
       <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-end ">
-          <a href='#navHome' class="navbar-item"> Home </a>
+        <div class="navbar-end">
+          <a href="#navHome" class="navbar-item"> Home </a>
 
           <a href="#navSearch" class="navbar-item"> Search </a>
 
@@ -49,95 +56,115 @@
         </div>
       </div>
     </nav>
-<!-- Picture at the top of browser -->
+    <!-- Picture at the top of browser -->
     <div class="pictureContainer">
-      <img id="navHome"
+      <img
+        id="navHome"
         src="./assets/images/starWarsHeader.JPEG"
-        alt="header";
-        width="100%";
+        alt="header"
+        ;
+        width="100%"
+        ;
       />
     </div>
-<!-- NEEDS FIXING -->
-<!-- row one containing planets search bar -->
+    <!-- row one containing planets search bar -->
     <div id="navSearch" class="row">
-      
-        <div class="search-bar-border has-text-centered">
-          <select name="planets" id="planetsList"></select>
-          <button id="search-by-planet-button" class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
-
-        </div>
-    </div>
-<!-- row two containing climates search bar -->
-    <div class="row">
-      <div class="row"></div>
-      
-        <div class="search-bar-border has-text-centered">
-        
-
-            <select name="planets" id="climatesList"></select>
-            <button id="search-by-climate-button" class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
-          
-        </div>
-      
-<!-- row three containing destination cards -->
-    <div id="navPop" class="row">
-      <div class="row"></div>
-      <div class="Destinations">
-        <!-- add cards for destinations here -->
-        <!-- Planet Tatooine Card -->
-        <div class="column">
-            <link rel="stylesheet" href="./singlePlanetPage.html">
-            <div class="homePageCard">Tatooine
-              <button class="planetTatooine"><img src="./assets/homepagePlanets/tatooine.JPG"></button>
-              </div>
-          </div>
-        </div>
-        <!-- Planet Alderaan Card -->
-        <div class="column">
-          <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="homePageCard">Alderaan
-            <button class="planetAlderaan"><img src="./assets/homepagePlanets/alderaan.JPG"></button>
-          </div>
-        <!-- Planet Hoth Card -->
-        <div class="column">
-          <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="homePageCard">Hoth
-            <button class="planetAlderaan"><img src="./assets/homepagePlanets/hoth.jpg"></button>
-          </div>
-        </div>
-
-        <!-- Planet Endoor Card-->
-        <div class="column">
-          <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="homePageCard">Endoor
-            <button class="planetAlderaan"><img src="./assets/homepagePlanets/endoor.jpg"></button>
-          </div>
-        </div>
-        <!-- Planet Naboo Card -->
-        <div class="column">
-          <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="homePageCard">Naboo
-            <button class="planetAlderaan"><img src="./assets/homepagePlanets/naboo.jpg"></button>
-          </div>
-        </div>
-        <!-- Planet Coruscant Card -->
-        <div class="column">
-          <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="homePageCard">Coruscant
-            <button class="planetAlderaan"><img src="./assets/homepagePlanets/corcuscant.jpg"></button>
-          </div>
-          
-        </div>
-        <!-- Planet Mustafar Card -->
-        <div class="column">
-          <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="homePageCard">Mustafar
-            <button class="planetAlderaan"><img src="./assets/homepagePlanets/mustafar.jpg"></button>
-          </div>
-        </div>
+      <div class="search-bar-border has-text-centered">
+        <select name="planets" id="planetsList"></select>
+        <button
+          id="search-by-planet-button"
+          class="submit-btn"
+          type="submit"
+          style="width: 10%; height: 20%"
+        >
+          Search
+        </button>
       </div>
     </div>
-  
+    <!-- row two containing climates search bar -->
+    <div class="row">
+      <div class="search-bar-border has-text-centered">
+        <select name="planets" id="climatesList"></select>
+        <button
+          id="search-by-climate-button"
+          class="submit-btn"
+          type="submit"
+          style="width: 10%; height: 20%"
+        >
+          Search
+        </button>
+      </div>
+      <br>
+      <!-- row three containing destination cards -->
+      <div id="navPop" class="row">
+        <div class="Destinations">
+
+        <div class="columns has-text-centered">
+          <!-- Planet Tatooine Card -->
+          <div class="column">
+            <div class="homePageCard">
+              Tatooine
+              <button class="planetTatooine noButtonBorder">
+                <img src="./assets/homepagePlanets/tatooine.JPG" />
+              </button>
+            </div>
+          </div>
+          <!-- Planet Alderaan Card -->
+          <div class="column">
+            <div class="homePageCard">
+              Alderaan
+              <button class="planetAlderaan noButtonBorder">
+                <img src="./assets/homepagePlanets/alderaan.JPG" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns has-text-centered">
+          <!-- Planet Hoth Card -->
+          <div class="column">
+            <div class="homePageCard">
+              Hoth
+              <button class="planetHoth noButtonBorder">
+                <img src="./assets/homepagePlanets/hoth.jpg" />
+              </button>
+            </div>
+          </div>
+          <!-- Planet Mustafar Card -->
+          <div class="column">
+            <div class="homePageCard">
+              Mustafar
+              <button class="planetMustafar noButtonBorder">
+                <img src="./assets/homepagePlanets/mustafar.jpg" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns has-text-centered">
+          <!-- Planet Naboo Card -->
+          <div class="column">
+          <div class="homePageCard">
+            Naboo
+            <button class="planetNaboo noButtonBorder">
+              <img src="./assets/homepagePlanets/naboo.jpg" />
+            </button>
+          </div>
+          </div>
+          <!-- Planet Coruscant Card -->
+          <div class="column">
+          <div class="homePageCard">
+            Coruscant
+            <button class="planetCoruscant noButtonBorder">
+              <img src="./assets/homepagePlanets/corcuscant.jpg" />
+            </button>
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="

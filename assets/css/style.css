@@ -32,7 +32,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
     height: 100%;
 }
 
@@ -150,9 +149,10 @@ body {
     margin-top: 8%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
-    width: 30%;
+    width: 60%;
     text-align: center;
     box-shadow: 0 6px 10px black;
+    display: inline-block;
 }
 
 h1 {
@@ -176,4 +176,10 @@ h3{
 .goBackButton{
     background-color: #1a1a1a;
     color: #ffe81f;
+}
+
+.noButtonBorder{
+    padding: 0;
+    border: none;
+    background: none;
 }
