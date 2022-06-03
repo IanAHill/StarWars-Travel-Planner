@@ -10,16 +10,16 @@ var swapi3 = "https://swapi.dev/api/planets/?page=3";
 var planetsArray = [];
 var searchedClimatesArray = [];
 var possibleClimates = [
-  "arid",
-  "temperate",
-  "frozen",
-  "frigid",
-  "murky",
-  "hot",
-  "tropical",
-  "artificial temperate",
-  "polluted",
-  "unknown",
+  "Arid",
+  "Temperate",
+  "Frozen",
+  "Frigid",
+  "Murky",
+  "Hot",
+  "Tropical",
+  "Artificial Temperate",
+  "Polluted",
+  "Unknown",
 ];
 
 function getPlanetInfo() {

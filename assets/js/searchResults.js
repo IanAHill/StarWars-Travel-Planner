@@ -6,16 +6,16 @@ var climateArray = JSON.parse(localStorage.getItem("searchedClimates"));
 var planetList = $("#planetsList");
 var climateList = $("#climatesList");
 var possibleClimates = [
-  "arid",
-  "temperate",
-  "frozen",
-  "frigid",
-  "murky",
-  "hot",
-  "tropical",
-  "artificial temperate",
-  "polluted",
-  "unknown",
+  "Arid",
+  "Temperate",
+  "Frozen",
+  "Frigid",
+  "Murky",
+  "Hot",
+  "Tropical",
+  "Artificial Temperate",
+  "Polluted",
+  "Unknown",
 ];
 
 function goToSinglePage() {

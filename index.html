@@ -40,28 +40,18 @@
       </div>
 <!-- Nav bar buttons + drop down menu -->
       <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item"> Home </a>
+        <div class="navbar-end ">
+          <a href='#navHome' class="navbar-item"> Home </a>
 
-          <a class="navbar-item"> Documentation </a>
+          <a href="#navSearch" class="navbar-item"> Search </a>
 
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link"> More </a>
-
-            <div class="navbar-dropdown">
-              <a class="navbar-item"> About </a>
-              <a class="navbar-item"> Jobs </a>
-              <a class="navbar-item"> Contact </a>
-              <hr class="navbar-divider" />
-              <a class="navbar-item"> Report an issue </a>
-            </div>
-          </div>
+          <a href="#navPop" class="navbar-item"> Popular Destinations </a>
         </div>
       </div>
     </nav>
 <!-- Picture at the top of browser -->
     <div class="pictureContainer">
-      <img
+      <img id="navHome"
         src="./assets/images/starWarsHeader.JPEG"
         alt="header";
         width="100%";
@@ -69,10 +59,9 @@
     </div>
 <!-- NEEDS FIXING -->
 <!-- row one containing planets search bar -->
-    <div class="row">
-      <div class="row">First Row</div>
-        <div class="search-bar-border">
-          <!-- <input id="planet-input" type="text" placeholder="Search by Planets"> -->
+    <div id="navSearch" class="row">
+      
+        <div class="search-bar-border has-text-centered">
           <select name="planets" id="planetsList"></select>
           <button id="search-by-planet-button" class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
 
@@ -80,11 +69,10 @@
     </div>
 <!-- row two containing climates search bar -->
     <div class="row">
-      <div class="row">Second Row</div>
+      <div class="row"></div>
       
-        <div class="search-bar-border">
-          
-            <!-- <input id="climate-input" type="text" placeholder="Search by Climate"> -->
+        <div class="search-bar-border has-text-centered">
+        
 
             <select name="planets" id="climatesList"></select>
             <button id="search-by-climate-button" class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
@@ -92,8 +80,8 @@
         </div>
       
 <!-- row three containing destination cards -->
-    <div class="row">
-      <div class="row">Third Row</div>
+    <div id="navPop" class="row">
+      <div class="row"></div>
       <div class="Destinations">
         <!-- add cards for destinations here -->
         <!-- Planet Tatooine Card -->

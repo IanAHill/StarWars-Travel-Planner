@@ -20,13 +20,14 @@ function getWeather(lat, lon) {
       console.log(data.current.temp);
       console.log(data.current.weather[0].main);
       currentConditions.textContent = data.current.weather[0].main;
-      currentTemp.textContent = data.current.temp;
+      currentTemp.textContent =
+        "Current Temperature: " + data.current.temp + "°F";
     });
 }
 
 function displayPlanetData(planet) {
   var planetsArray = JSON.parse(localStorage.getItem("planetsArray"));
-  switch (planetsArray[planet].climate.split(",")[0]) {
+  switch (planetsArray[planet].climate.split(",")[0].trim()) {
     case "arid":
       getWeather(25.28, 14.43);
       break;
@@ -55,7 +56,7 @@ function displayPlanetData(planet) {
       getWeather(25, -77);
       break;
 
-    case "artificial":
+    case "artificial temperate":
       getWeather(40, -74);
       break;
 
@@ -69,12 +70,12 @@ function displayPlanetData(planet) {
   }
 
   // displays planet name
-  planetName.textContent = planetsArray[planet].name;
+  planetName.textContent = planetsArray[planet].name.toUpperCase();
 
   console.log(planetsArray);
 
   // switch statement pictures
-  switch (planetName.textContent) {
+  switch (planetsArray[planet].name) {
     case "Tatooine":
       imageEl.setAttribute("src", "assets/images/tatooine.webp");
       planetDesc.textContent =
@@ -146,7 +147,7 @@ function displayPlanetData(planet) {
         "This planet is located in the core systems. It is a tropical jungle world, home of the Wookies. During the reign of the Empire, Kashyyyk was enslaved. Only until a force of Rebels led by Han Solo and Chewbacca were they able to liberate the planet. Explore the world's various mountain ranges and giant Wroshyr trees.";
       break;
     case "Polis Massa":
-      imageEl.setAttribute("src", "assets/images/corellia.jpg");
+      imageEl.setAttribute("src", "assets/images/polismassa.jpeg");
       planetDesc.textContent =
         "This is an asteroid field in the outer rim that became a safe haven for Jedi after Order 66. This is where Luke Skywalker and Leia Organa were born. Visit one of the first bases for the Rebel Alliance.";
       break;
