@@ -16,10 +16,11 @@ var possibleClimates = [
   "arid",
   "temperate",
   "frozen",
+  "frigid",
   "murky",
   "hot",
   "tropical",
-  "artificial",
+  "artificial temperate",
   "polluted",
   "unknown",
 ];
@@ -96,8 +97,8 @@ function searchClimate() {
   searchedClimatesArray = [];
   for (var i = 0; i < planetsArray.length; i++) {
     if (
-      planetsArray[i].climate.split(",")[0].toLowerCase() ===
-      climateList.val().toLowerCase()
+      planetsArray[i].climate.split(",")[0].toLowerCase().trim() ===
+      climateList.val().toLowerCase().trim()
     ) {
       searchedClimatesArray.push(planetsArray[i]);
     }
