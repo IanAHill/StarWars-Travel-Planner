@@ -9,6 +9,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -67,38 +70,36 @@
 <!-- NEEDS FIXING -->
 <!-- row one containing planets search bar -->
     <div class="row">
-      <div class="row1">First Row - planet search bar</div>
-      <div class="searchBarContainer">
-        <div class="search-bar-border" type="card">
-          <form action="">
-            <input class="planetBar" type="text" placeholder="Search by Planets" name="q">
-            <a class="search-btn" href="#"></a>
-            <button class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
-        </form>
+      <div class="row">First Row</div>
+        <div class="search-bar-border">
+          <!-- <input id="planet-input" type="text" placeholder="Search by Planets"> -->
+          <select name="planets" id="planetsList"></select>
+          <button id="search-by-planet-button" class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
+
         </div>
-      </div>
+    </div>
 <!-- row two containing climates search bar -->
     <div class="row">
-      <div class="row">Second Row - climate search bar</div>
-      <div class="searchBarContainer">
+      <div class="row">Second Row</div>
+      
         <div class="search-bar-border">
-          <form action="">
-            <input class="climateBar" type="text" placeholder="Search by Climate" name="q">
-            <a class="search-btn" href="#"></a>
-            <button class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
-          </form>
-        </div>
-      </div>
+          
+            <!-- <input id="climate-input" type="text" placeholder="Search by Climate"> -->
 
-    <div class="row1">
-      <div class="rowPop">
-        <h1>Popular Destinations</h1>
-      <div class="destinations">
+            <select name="planets" id="climatesList"></select>
+            <button id="search-by-climate-button" class="submit-btn" type="submit" style="width: 10%; height:20%;">Search</button>
+          
+        </div>
+      
+<!-- row three containing destination cards -->
+    <div class="row">
+      <div class="row">Third Row</div>
+      <div class="Destinations">
         <!-- add cards for destinations here -->
         <!-- Planet Tatooine Card -->
         <div class="column">
             <link rel="stylesheet" href="./singlePlanetPage.html">
-            <div class="card">Tatooine
+            <div class="homePageCard">Tatooine
               <button class="planetTatooine"><img src="./assets/homepagePlanets/tatooine.JPG"></button>
               </div>
           </div>
@@ -106,13 +107,13 @@
         <!-- Planet Alderaan Card -->
         <div class="column">
           <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="card">Alderaan
+          <div class="homePageCard">Alderaan
             <button class="planetAlderaan"><img src="./assets/homepagePlanets/alderaan.JPG"></button>
           </div>
         <!-- Planet Hoth Card -->
         <div class="column">
           <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="card">Hoth
+          <div class="homePageCard">Hoth
             <button class="planetAlderaan"><img src="./assets/homepagePlanets/hoth.jpg"></button>
           </div>
         </div>
@@ -120,21 +121,21 @@
         <!-- Planet Endoor Card-->
         <div class="column">
           <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="card">Endoor
+          <div class="homePageCard">Endoor
             <button class="planetAlderaan"><img src="./assets/homepagePlanets/endoor.jpg"></button>
           </div>
         </div>
         <!-- Planet Naboo Card -->
         <div class="column">
           <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="card">Naboo
+          <div class="homePageCard">Naboo
             <button class="planetAlderaan"><img src="./assets/homepagePlanets/naboo.jpg"></button>
           </div>
         </div>
         <!-- Planet Coruscant Card -->
         <div class="column">
           <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="card">Coruscant
+          <div class="homePageCard">Coruscant
             <button class="planetAlderaan"><img src="./assets/homepagePlanets/corcuscant.jpg"></button>
           </div>
           
@@ -142,7 +143,7 @@
         <!-- Planet Mustafar Card -->
         <div class="column">
           <link rel="stylesheet" href="./singlePlanetPage.html">
-          <div class="card">Mustafar
+          <div class="homePageCard">Mustafar
             <button class="planetAlderaan"><img src="./assets/homepagePlanets/mustafar.jpg"></button>
           </div>
         </div>

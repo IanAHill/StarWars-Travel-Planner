@@ -1,10 +1,17 @@
 *{
     box-sizing: border-box;
+    font-family: 'Goldman', cursive;
+}
+
+html{
+    height: 100%;
 }
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
 }
+
 .topnav{
     display: flex;
     justify-content: center;
@@ -32,14 +39,23 @@ body{
     padding: 0 10px;
 } */
 
+.aTag{
+    white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 2px 2px black;
+}
+
 .card {
     margin-top: 8%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     width: 30%;
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: black;
+    color:#ffe81f;
   }
+
+
 
   /* @media screen and (max-width: 600px) {
     .topnav a, .topnav input[type=text] {
@@ -108,7 +124,12 @@ body {
 }
 
 /* cards design */
-.card {
+.homePageCard {
+    margin-top: 8%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    width: 30%;
+    text-align: center;
     box-shadow: 0 6px 10px black;
 }
 

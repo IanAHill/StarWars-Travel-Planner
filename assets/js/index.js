@@ -1,7 +1,7 @@
-var searchByPlanetButton = $("#search-by-planet-button"); // NEEDS TO BE LINKED WITH HTML ***********
-var searchByClimateButton = $("#search-by-climate-button"); // NEEDS TO BE LINKED WITH HTML ***********
-var planetInput = $("#planet-input"); // NEEDS TO BE LINKED WITH HTML ***********
-var climateInput = $("#climate-input"); // NEEDS TO BE LINKED WITH HTML ***********
+var searchByPlanetButton = $("#search-by-planet-button");
+var searchByClimateButton = $("#search-by-climate-button");
+var planetList = $("#planetsList");
+var climateList = $("#climatesList");
 
 var swapi1 = "https://swapi.dev/api/planets/?page=1";
 var swapi2 = "https://swapi.dev/api/planets/?page=2";
@@ -9,11 +9,18 @@ var swapi3 = "https://swapi.dev/api/planets/?page=3";
 
 var planetsArray = [];
 var searchedClimatesArray = [];
-
-//remove index 27 from planet array as its unknown from swapi
-// function cutOutUnknown() {
-//   planetsArray.splice(27, 1);
-// }
+var possibleClimates = [
+  "arid",
+  "temperate",
+  "frozen",
+  "frigid",
+  "murky",
+  "hot",
+  "tropical",
+  "artificial temperate",
+  "polluted",
+  "unknown",
+];
 
 function getPlanetInfo() {
   fetch(swapi1).then(function (response) {
@@ -32,7 +39,22 @@ function getPlanetInfo() {
                 planetsArray.push(data3.results[i]);
               }
               console.log(planetsArray);
-              // cutOutUnknown();
+
+              for (var i = 0; i < planetsArray.length; i++) {
+                var newDropDown = $(
+                  "<option>" + planetsArray[i].name + "</option>"
+                );
+                newDropDown.attr("value", planetsArray[i].name);
+
+                planetList.append(newDropDown);
+              }
+
+              for (var i = 0; i < possibleClimates.length; i++) {
+                var newDropDown = $(
+                  "<option>" + possibleClimates[i] + "</option>"
+                );
+                climateList.append(newDropDown);
+              }
               localStorage.setItem(
                 "planetsArray",
                 JSON.stringify(planetsArray)
@@ -46,15 +68,9 @@ function getPlanetInfo() {
 }
 
 function searchPlanet() {
-  //*********************FOR TESTING*********************
-  planetInput = $("#test1input");
-  //*********************FOR TESTING*********************
-
-  console.log(planetInput.val());
+  console.log(planetList.val());
   for (var i = 0; i < planetsArray.length; i++) {
-    if (
-      planetsArray[i].name.toLowerCase() === planetInput.val().toLowerCase()
-    ) {
+    if (planetsArray[i].name.toLowerCase() === planetList.val().toLowerCase()) {
       console.log(
         "planet searched is " +
           planetsArray[i].name.toLowerCase() +
@@ -64,19 +80,15 @@ function searchPlanet() {
       localStorage.setItem("indexOfSearch", i);
     }
   }
-  // goToSinglePage();
+  goToSinglePage();
 }
 
 function searchClimate() {
-  //*********************FOR TESTING*********************
-  climateInput = $("#test2input");
-  //*********************FOR TESTING*********************
-
   searchedClimatesArray = [];
   for (var i = 0; i < planetsArray.length; i++) {
     if (
-      planetsArray[i].climate.split(",")[0].toLowerCase() ===
-      climateInput.val().toLowerCase()
+      planetsArray[i].climate.split(",")[0].toLowerCase().trim() ===
+      climateList.val().toLowerCase().trim()
     ) {
       searchedClimatesArray.push(planetsArray[i]);
     }
@@ -99,12 +111,11 @@ function goToResultsPage() {
 
 getPlanetInfo();
 
-//*********************FOR TESTING*********************
-var testButton1 = $("#test1");
-testButton1.on("click", searchPlanet);
-var testButton2 = $("#test2");
-testButton2.on("click", searchClimate);
-//*********************FOR TESTING*********************
+function testClick() {
+  console.log("clciked");
+}
+
+$("add-dropdowns").on("click", testClick);
 
 searchByPlanetButton.on("click", searchPlanet);
 searchByClimateButton.on("click", searchClimate);
