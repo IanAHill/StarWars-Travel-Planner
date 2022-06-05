@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     font-family: 'Goldman', cursive;
+    background-color: black;
 }
 
 html{
@@ -67,7 +68,7 @@ body{
       padding: 14px;
     } */
 body {
-    background-color: whitesmoke;
+    background-color: black;
 }
 
 /* makes the nav bar black*/
@@ -85,16 +86,14 @@ body {
 /* items in menu */
 .navbar-dropdown .navbar-item {
     color: black;
+    background-color: #ccc;
 }
 /* picture header */
 .pictureContainer {
     text-align: center;
-}
-
-.searchBarContainer {
-   position:relative;
-   padding: 14px 0;
-   background-color: blue;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
 }
 
 .submit-btn{
@@ -102,47 +101,114 @@ body {
     font-size: 16px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     padding: 16px 20px;
-    cursor: pointer;
+    cursor:pointer;
     border-radius: 10px;
     border: none;
     display: inline-block;
 }
 
-.search-bar-border {
-    border-style:double;
-    margin: 2rem;
-    background-color: orange;
-    padding: auto;
+.submit-btn:hover {
+    background-color: #ffe81f;
 }
 
-.planetBar {
-    background-color: purple;
+.planet-bar-border {
+    border-style: solid;
+    border-width: 10%;
+    border-color: whitesmoke;
+    margin-left: 2in;
+    margin-right: 2in;
+    margin-bottom: 1in;
+    background-color: black;
+    padding: 2px;
+    box-shadow: 0 10px 10px 1px red;
 }
 
-.climateBar {
-    background-color: green;
+.climate-bar-border {
+    border-style: solid;
+    border-width: 10%;
+    border-color: whitesmoke;
+    margin-left: 2in;
+    margin-right: 2in;
+    background-color: black;
+    padding: 2px;
+    box-shadow: 0 8px 8px 1px royalblue;
 }
 
 /* cards design */
 .homePageCard {
+    border-style: solid;
+    border-width: 10px;
     margin-top: 8%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 8px 0 black;
     padding: 16px;
     width: 30%;
     text-align: center;
+    color: royalblue;
+    font-size: 24px;
     box-shadow: 0 6px 10px black;
+    background-color: black;
+}
+
+.homePageCard:hover {
+    background-color: rgba(41, 41, 41, 0.798);
+    text-decoration: underline;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    word-spacing: 16px;
     text-align: center;
-    text-decoration: underline;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: double;
+    border-width: 20px;
+    border-color: #ffe81f;
+    margin-left: 1in;
+    margin-right: 1in;
+    font-family: Goldman;
     font-weight: 50%;
     color: #ffe81f;
 }
 
-.submit-btn {
-    background-color: black;
+h2 {
     color: white;
+    font-size: 20px;
 }
+
+.submit-btn {
+    background-color: whitesmoke;
+    color: black
+}
+
+.footer {
+    color: #ffe81f;
+    text-align: center;
+    font-size: 25px;
+    background-color: black;
+}
+
+.footer-container {
+    background-color: black;
+}
+
+br {
+    background: black;
+}
+
+#planetsList {
+    background-color: whitesmoke;
+    margin-left: 1in;
+    margin-right: 1in;
+    margin-bottom: 30px;
+    width: 50%;
+    font-size: 13px;
+    font-family: Goldman;
+}
+
+#climatesList {
+    background-color: whitesmoke;
+    margin-left: 1in;
+    margin-right: 1in;
+    margin-bottom: 30px;
+    width: 50%;
+    font-size: 13px;
+    font-family: Goldman;
+} 
