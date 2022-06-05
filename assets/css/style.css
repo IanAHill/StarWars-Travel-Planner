@@ -133,10 +133,6 @@ body {
     padding: auto;
 }
 
-.submit-btn:hover {
-    background-color: #ffe81f;
-}
-
 .planet-bar-border {
     border-style: solid;
     border-width: 10%;
