@@ -10,16 +10,16 @@ var swapi3 = "https://swapi.dev/api/planets/?page=3";
 var planetsArray = [];
 var searchedClimatesArray = [];
 var possibleClimates = [
-  "arid",
-  "temperate",
-  "frozen",
-  "frigid",
-  "murky",
-  "hot",
-  "tropical",
-  "artificial temperate",
-  "polluted",
-  "unknown",
+  "Arid",
+  "Temperate",
+  "Frozen",
+  "Frigid",
+  "Murky",
+  "Hot",
+  "Tropical",
+  "Artificial Temperate",
+  "Polluted",
+  "Unknown",
 ];
 
 function getPlanetInfo() {
@@ -111,11 +111,41 @@ function goToResultsPage() {
 
 getPlanetInfo();
 
-function testClick() {
-  console.log("clciked");
+function tatooineClick() {
+  localStorage.setItem("indexOfSearch", 0);
+  goToSinglePage();
 }
+$(".planetTatooine").on("click", tatooineClick);
 
-$("add-dropdowns").on("click", testClick);
+function alderaanClick() {
+  localStorage.setItem("indexOfSearch", 1);
+  goToSinglePage();
+}
+$(".planetAlderaan").on("click", alderaanClick);
+
+function hothClick() {
+  localStorage.setItem("indexOfSearch", 3);
+  goToSinglePage();
+}
+$(".planetHoth").on("click", hothClick);
+
+function mustafarClick() {
+  localStorage.setItem("indexOfSearch", 12);
+  goToSinglePage();
+}
+$(".planetMustafar").on("click", mustafarClick);
+
+function nabooClick() {
+  localStorage.setItem("indexOfSearch", 7);
+  goToSinglePage();
+}
+$(".planetNaboo").on("click", nabooClick);
+
+function coruscantClick() {
+  localStorage.setItem("indexOfSearch", 8);
+  goToSinglePage();
+}
+$(".planetCoruscant").on("click", coruscantClick);
 
 searchByPlanetButton.on("click", searchPlanet);
 searchByClimateButton.on("click", searchClimate);
