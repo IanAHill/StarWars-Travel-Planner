@@ -1,13 +1,23 @@
 # Project 1 - Star Wars Vacation Planner
+
 ![](./assets/homepagePlanets/homepage.png)
+
 #
+
 ![](./assets/homepagePlanets/Screen%20Shot%202022-06-05%20at%203.38.26%20PM.png)
+
 #
+
 ![](/assets/homepagePlanets/Screen%20Shot%202022-06-05%20at%203.39.31%20PM.png)
+
 #
+
 ![](./assets/homepagePlanets/Screen%20Shot%202022-06-05%20at%203.57.26%20PM.png)
+
 #
+
 ## User Story
+
 ```
 AS A traveler
 
@@ -21,29 +31,33 @@ SO THAT I can pick my desired location
 
 THEN I am presented information on the selected location
 ```
+
 ## Acceptance Criteria
-* Use a CSS framework other than Bootstrap.
 
-* Be deployed to GitHub Pages.
+- Use a CSS framework other than Bootstrap.
 
-* Be interactive (i.e., accept and respond to user input).
+- Be deployed to GitHub Pages.
 
-* Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources).
+- Be interactive (i.e., accept and respond to user input).
 
-* Does not use alerts, confirms, or prompts (use modals).
+- Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources).
 
-* Use client-side storage to store persistent data.
+- Does not use alerts, confirms, or prompts (use modals).
 
-* Be responsive.
+- Use client-side storage to store persistent data.
 
-* Have a polished UI.
+- Be responsive.
 
-* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+- Have a polished UI.
 
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+- Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+
+- Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 #
+
 ## Description
+
 ```
 GIVEN I am using a vacation planner
 
@@ -55,7 +69,7 @@ WHEN I select the planet in the drop down menu and hit the search button
 
 THEN I am presented the selected planet's name, the planet's description and the planet's climate
 
-WHEN I go back to the home page 
+WHEN I go back to the home page
 
 THEN I am presented the same drop down menus as before
 
@@ -67,21 +81,26 @@ WHEN I click on one of the Planets in the items listed
 
 THEN I am presented the selected planet's name, the planet's description and the planet's climate
 ```
+
 #
+
 ## List of Technology
-* HTML (HyperText Markup Language)
-* Style CSS (Cascading Style Sheets)
-* Javascript
-* [Bulma](https://bulma.io/)
-* [Star Wars - API #1](https://swapi.dev/api/)
-* [Weather Map - API #2](https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API%20key})
-* [Google Fonts](https://fonts.googleapis.com/css2?family=Goldman&display=swap)
-* [jQuery](https://code.jquery.com/jquery-3.6.0.js)
-* [Git Hub Repo](https://github.com/IanAHill/project-1)
-* [Deployed Project Link](https://ianahill.github.io/project-1/)
+
+- HTML (HyperText Markup Language)
+- Style CSS (Cascading Style Sheets)
+- Javascript
+- [Bulma](https://bulma.io/)
+- [Star Wars - API #1](https://swapi.dev/api/)
+- [Weather Map - API #2](https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API%20key})
+- [Google Fonts](https://fonts.googleapis.com/css2?family=Goldman&display=swap)
+- [jQuery](https://code.jquery.com/jquery-3.6.0.js)
+- [Deployed Project Link](https://ianahill.github.io/StarWars-Travel-Planner/)
+
 #
+
 ## List of Contributors
-* Ian Hill - [GitHub](https://github.com/IanAHill)
-* Chris Jackson - [GitHub](https://github.com/chrisjackson1)
-* Kayla Rosario - [GitHub](https://github.com/krosario314)
-* Alex Stokes - [GitHub](https://github.com/Zzaclipse)
+
+- Ian Hill - [GitHub](https://github.com/IanAHill)
+- Chris Jackson - [GitHub](https://github.com/chrisjackson1)
+- Kayla Rosario - [GitHub](https://github.com/krosario314)
+- Alex Stokes - [GitHub](https://github.com/Zzaclipse)
