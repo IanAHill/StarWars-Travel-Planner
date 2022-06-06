@@ -1,9 +1,11 @@
 # Project 1 - Star Wars Vacation Planner
-* add a picture
+![](./assets/homepagePlanets/homepage.png)
 #
-* add a picture
+![](./assets/homepagePlanets/Screen%20Shot%202022-06-05%20at%203.38.26%20PM.png)
 #
-* add a picture
+![](/assets/homepagePlanets/Screen%20Shot%202022-06-05%20at%203.39.31%20PM.png)
+#
+![](./assets/homepagePlanets/Screen%20Shot%202022-06-05%20at%203.57.26%20PM.png)
 #
 ## User Story
 ```
@@ -72,12 +74,14 @@ THEN I am presented the selected planet's name, the planet's description and the
 * Javascript
 * [Bulma](https://bulma.io/)
 * [Star Wars - API #1](https://swapi.dev/api/)
-* [Star Wars - API #2](https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API%20key})
-* [Git Hub Repo]()
-* [Deployed Project Link]()
+* [Weather Map - API #2](https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API%20key})
+* [Google Fonts](https://fonts.googleapis.com/css2?family=Goldman&display=swap)
+* [jQuery](https://code.jquery.com/jquery-3.6.0.js)
+* [Git Hub Repo](https://github.com/IanAHill/project-1)
+* [Deployed Project Link](https://ianahill.github.io/project-1/)
 #
 ## List of Contributors
 * Ian Hill - [GitHub](https://github.com/IanAHill)
 * Chris Jackson - [GitHub](https://github.com/chrisjackson1)
 * Kayla Rosario - [GitHub](https://github.com/krosario314)
-* Alexander Stokes - [GitHub](https://github.com/Zzaclipse)
+* Alex Stokes - [GitHub](https://github.com/Zzaclipse)
